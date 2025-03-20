@@ -8,7 +8,6 @@
   <title>
     Syed Mubeen Ali | Portfolio
   </title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,19 +18,30 @@
   <header class="header" role="banner" id="top">
     <div class="row">
         <nav class="nav" role="navigation">
-            <!-- <div class="hamburger" onclick="toggleMenu()">☰</div> Hamburger Menu -->
-            <ul class="nav__items">
+          <div class="nav-links">
+             <ul class="nav__items">
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                 <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                 <li class="nav__item"><a href="#publications" class="nav__link">Publication</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            </ul>
+              </ul>
+            </div>
+            <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
         </nav>
     </div>
 
-
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="mobile-menu">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#publications">Publication</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+      </div>
+      <script src="script.js"></script>
 
 
     <!-- ***** Home ***** -->
@@ -75,28 +85,28 @@
           </div>
           <div class="project-card">
               <div class="project-info">
-                  <h3>Self-Driving Car</h3>
+                  <h3>Air Canvas</h3>
                   <p>uploading soon</p>
                   <!-- <span class="tech-used">Python | AI | TensorFlow</span> -->
               </div>
           </div>
           <div class="project-card">
             <div class="project-info">
-                <h3>Self-Driving Car</h3>
+                <h3>Crop Prediction System</h3>
                 <p>uploading soon</p>
                 <!-- <span class="tech-used">Python | AI | TensorFlow</span> -->
             </div>
         </div>
         <div class="project-card">
           <div class="project-info">
-              <h3>Self-Driving Car</h3>
+              <h3>Food Serving Bot</h3>
               <p>uploading soon</p>
               <!-- <span class="tech-used">Python | AI | TensorFlow</span> -->
           </div>
       </div>
       <div class="project-card">
         <div class="project-info">
-            <h3>Self-Driving Car</h3>
+            <h3>Face Mask Detection</h3>
             <p>Uploading soon</p>
             <!-- <span class="tech-used">Python | AI | TensorFlow</span> -->
         </div>

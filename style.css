@@ -337,15 +337,32 @@ body:not(.user-is-tabbing) a:focus {
     height: 70%;
 }
 
-@media(max-width: 900px) {
+/* Mobile Optimization */
+@media (max-width: 768px) {
     .back-to-top {
-        right: 2rem;
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .back-to-top__image {
+        width: 25px;
+        height: 25px;
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 480px) {
     .back-to-top {
-        right: 1rem;
+        width: 35px;
+        height: 35px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .back-to-top__image {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -357,7 +374,7 @@ body:not(.user-is-tabbing) a:focus {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: var(--gutter-normal) 0;
 }
 
@@ -419,7 +436,49 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
 
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mobile-menu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    color: var(--pink);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
 
 
 /* --------------------------------------- */
@@ -483,17 +542,7 @@ body:not(.user-is-tabbing) a:focus {
     margin: auto;
 }
 
-/* .projects-container{
-    display: flex;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    overflow-x: auto;
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
-    scrollbar-width: none; 
-    scroll-behavior: smooth;
-} */
+
 
 .project-card {
     background: linear-gradient(135deg, #4CAF50, #2196F3);
@@ -544,16 +593,7 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Skills ----- */
 /* --------------------------------------- */
 
-/* .skills-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
-    scrollbar-width: none; 
-    scroll-behavior: smooth;
-} */
+
 
 .skills-container{
     display: grid;

@@ -39,23 +39,11 @@ window.addEventListener("scroll", () => {
 });
 
 function toggleMenu() {
-  document.querySelector('.nav__items').classList.toggle('active');
+  var menu = document.getElementById("mobileMenu");
+  if (menu.style.display === "flex") {
+      menu.style.display = "none";
+  } else {
+      menu.style.display = "flex";
+  }
 }
 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const skillsContainer = document.querySelector(".skills-container");
-
-//   function autoSlide() {
-//       const firstCard = skillsContainer.firstElementChild;
-//       skillsContainer.style.transition = "transform 0.2s ease-in-out";
-//       skillsContainer.style.transform = "translateX(-160px)";
-//       setTimeout(() => {
-//           skillsContainer.style.transition = "none";
-//           skillsContainer.style.transform = "translateX(0)";
-//           skillsContainer.appendChild(firstCard); 
-//       }, 100); 
-//   }
-
-//   setInterval(autoSlide, 5000);
-// });
