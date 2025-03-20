@@ -38,6 +38,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
+function toggleMenu() {
+  document.querySelector('.nav__items').classList.toggle('active');
+}
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const skillsContainer = document.querySelector(".skills-container");
 
