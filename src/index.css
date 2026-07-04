@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@theme {
+  --color-bg: #0A1512;
+  --color-panel: #0F1F1B;
+  --color-panel-line: #1C332C;
+  --color-text: #ECEAE3;
+  --color-muted: #8FA69C;
+  --color-copper: #E8974E;
+  --color-signal: #5FD9C5;
+
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #F3EEE6;
+  --color-panel: #FBF8F2;
+  --color-panel-line: #D7CFC3;
+  --color-text: #1B1A18;
+  --color-muted: #686156;
+  --color-copper: #A05E22;
+  --color-signal: #155F57;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+.footer-social-icon {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.78;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+
+:root[data-theme="dark"] .footer-social-icon {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="light"] .footer-social-icon {
+  filter: saturate(0.75) contrast(0.95) brightness(0.45);
+}
+
+.group:hover .footer-social-icon {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-copper);
+  color: var(--color-bg);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
